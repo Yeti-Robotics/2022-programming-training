@@ -12,4 +12,42 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+
+public static final class DriveConstants{
+  public static final int LEFT_FALCON_1 = 1;
+  public static final int LEFT_FALCON_2 = 2;
+  public static final int RIGHT_FALCON_1 = 3;
+  public static final int RIGHT_FALCON_2 = 4;
+
+}
+
+public static final class ShooterConstants{
+public static final int RIGHT_FLYWHEEL = 5;
+public static final int LEFT_FLYWHEEL = 6;
+public static final double SHOOT_1_SPEED = 1.0;
+public static final double SHOOT_2_SPEED = 1.0;
+public static final double REVERSE_SHOOT_1_SPEED = -1.0;
+public static final double REVERSE_SHOOT_2_SPEED = -1.0;
+
+public static final double ENCODER_RESOLUTION = 2048.0;
+public static final double PULLEY_RATIO = 48.0 / 36.0;
+public static final double ENCODER_TIME_CONVERSION = 600.0;
+}
+
+    public static final class IntakeConstants{
+        public static final int INTAKE_VICTOR = 8;
+        public static final int[] INTAKE_PISTONS_SOLENOID = {0, 7};
+        public static final double ROLL_IN_SPEED = 1.0;
+        public static final double ROLL_OUT_SPEED = -1.0;
+      }
+
+    public static final class OIConstants{
+      public static final int kDriverControllerPort = 1;
+
+      public static final int RIGHT_JOYSTICK = 1;
+      public static final int LEFT_JOYSTICK = 0;
+      public static final int SECONDARY_JOYSTICK = 2;
+      public static final int DRIVER_STATION_JOY = 0;
+    }
+}

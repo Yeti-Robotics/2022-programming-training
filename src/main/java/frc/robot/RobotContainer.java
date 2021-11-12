@@ -5,9 +5,14 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 //import frc.robot.commands.ExampleCommand;
 //import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.DrivetrainSubsystem;
+import frc.robot.subsystems.IntakeSubsystem;
+import frc.robot.subsystems.ShooterSubsystem;
+
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -17,13 +22,27 @@ import edu.wpi.first.wpilibj.XboxController;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
+public final Joystick driverStationJoystick;
+public DrivetrainSubsystem drivetrainSubsystem;
+public ShooterSubsystem shooterSubsystem;
+public IntakeSubsystem intakeSubsystem;
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
+    driverStationJoystick = new Joystick(frc.robot.Constants.OIConstants.DRIVER_STATION_JOY);
+  
+    shooterSubsystem = new ShooterSubsystem();
+    intakeSubsystem = new IntakeSubsystem();
+    drivetrainSubsystem = new DrivetrainSubsystem();
+
+
+      
+        
     configureButtonBindings();
   }
+
 
   /**
    * Use this method to define your button->command mappings. Buttons can be created by
